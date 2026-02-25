@@ -1,17 +1,18 @@
 public class PalindromeCheckerApp {
 
-    public static void main(String args[]){
-        int i;
-        String str = new String("madam");
-        int n = str.length();
-        for (i = 0; i < str.length()/2; i++) {
+    public static void main(String args[]) {
+        String reversed = "";
+        String str = "madam";
 
-            if (str.charAt(i) != str.charAt(n - i - 1)) {
-                System.out.println("Not a Palindrome!");
-                return;
-            }
+        for (int i = str.length() - 1; i >= 0; i--) {
 
+            reversed = reversed + str.charAt(i);
         }
-                System.out.println("Palindrome!");
+
+        if (reversed.equals(str)) {
+            System.out.println("Palindrome!");
+        } else {
+            System.out.println("Not a Palindrome!");
         }
     }
+}
